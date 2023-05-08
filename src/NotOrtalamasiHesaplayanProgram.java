@@ -4,7 +4,8 @@ public class NotOrtalamasiHesaplayanProgram {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        int mat, fzk, kmya, trkc, trh, mzk;
+        int mat, fzk, kmya, trkc, trh, mzk, ort;
+        String durum;
 
         System.out.print("Matematik notu : ");
         mat = scanner.nextInt();
@@ -24,6 +25,9 @@ public class NotOrtalamasiHesaplayanProgram {
         System.out.print("Müzik notu : ");
         mzk = scanner.nextInt();
 
-        System.out.print("Ortalama: " + (mat+fzk+kmya+trkc+trh+mzk)/6);
+        ort = (mat+fzk+kmya+trkc+trh+mzk)/6;
+        System.out.println("Ortalama: " + ort);
+        durum = (ort > 60) ? "Geçtiniz !" : "Kaldınız !";
+        System.out.println(durum);
     }
 }
